@@ -1,7 +1,9 @@
 
 from langchain_openai import ChatOpenAI
-from langchain_community.chains import ConversationalRetrievalChain
-from langchain_community.memory import ConversationBufferMemory
+# from langchain_community.chains import ConversationalRetrievalChain
+from langchain.chains import ConversationalRetrievalChain
+# from langchain_community.memory import ConversationBufferMemory
+from langchain.memory import ConversationBufferMemory
 from config import Config
 
 # from langchain.chat_models import ChatOpenAI
@@ -24,7 +26,7 @@ class LLMService:
 
         self.chain = ConversationalRetrievalChain.from_llm(
             llm = self.llm,
-            retriever = vector_store.vectore_store.as_retriever(),
+            retriever = vector_store.vector_store.as_retriever(),
             memory = self.memory
         )
 

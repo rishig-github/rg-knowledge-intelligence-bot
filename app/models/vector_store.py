@@ -1,7 +1,9 @@
 import chromadb
 #from langchain.vectorstores import Chroma
-from langchain_community.vectorstores import Chroma
-from langchain.embeddings import OpenAIEmbeddings
+# from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
+# from langchain.embeddings import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 
 
 class VectorStore:
